@@ -97,3 +97,29 @@ InitTestScene*.unity*
 
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
+
+# Unity auto-generated global settings (regenerable)
+ProjectSettings/ShaderGraphSettings.asset
+ProjectSettings/VFXManager.asset
+ProjectSettings/VFXSettings.asset
+ProjectSettings/XRSettings.asset
+
+# PackageCache (automatically regenerated from manifest.json)
+Library/PackageCache/
+
+# Local cache and artifact folders
+/.vsconfig
+/[Pp]ackages/packages-lock.json
+/[Oo]bj/
+/[Ll]ibrary/ScriptAssemblies/
+/[Ll]ibrary/Artifacts/
+*.unityproj
+*.user
+*.userprefs
+
+# Platform-specific build folders (if you build locally)
+[Bb]uilds_*/
+[Bb]uild_*/
+[Bb]in/
+[Dd]ebug/
+[Rr]elease/
