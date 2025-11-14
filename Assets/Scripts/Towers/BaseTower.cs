@@ -17,12 +17,29 @@ public class BaseTower : MonoBehaviour
     //public int maxUpgrades = 2;
     //public int upgradesApplied = 0;
 
+    [Header("Health")]
+    public int maxHealth = 100;
+    private int currentHealth;
+
     public GameObject projectilePrefab;
 
     private float nextFireTime;
 
     public Animator animator;
 
+    void Start()
+    {
+        currentHealth = maxHealth;
+    }
+
+    public void TakeDamage(int dmg)
+    {
+        currentHealth -= dmg;
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
     void Update()
     {
         if (Time.time >= nextFireTime)

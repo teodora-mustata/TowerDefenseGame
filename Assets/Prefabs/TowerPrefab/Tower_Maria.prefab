@@ -1,0 +1,138 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1666830394754140623
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 83e5aed6d085e124281f193c02c608b0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 27.453
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 83e5aed6d085e124281f193c02c608b0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.138
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 83e5aed6d085e124281f193c02c608b0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 36.053204
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 83e5aed6d085e124281f193c02c608b0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 83e5aed6d085e124281f193c02c608b0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 83e5aed6d085e124281f193c02c608b0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 83e5aed6d085e124281f193c02c608b0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 83e5aed6d085e124281f193c02c608b0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 83e5aed6d085e124281f193c02c608b0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 83e5aed6d085e124281f193c02c608b0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 83e5aed6d085e124281f193c02c608b0, type: 3}
+      propertyPath: m_Name
+      value: Tower_Maria
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 83e5aed6d085e124281f193c02c608b0, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 6045127d53d7c5f4abc164861146a11a, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 83e5aed6d085e124281f193c02c608b0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3648982465554154817}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 83e5aed6d085e124281f193c02c608b0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1360104555261791950}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 83e5aed6d085e124281f193c02c608b0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2674003228836702251}
+  m_SourcePrefab: {fileID: 100100000, guid: 83e5aed6d085e124281f193c02c608b0, type: 3}
+--- !u!1 &2008795341291795614 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 83e5aed6d085e124281f193c02c608b0, type: 3}
+  m_PrefabInstance: {fileID: 1666830394754140623}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &3648982465554154817
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008795341291795614}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1360104555261791950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008795341291795614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 669deb7925e60124d9100a5d4812ea22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BaseTower
+  towerName: Maria
+  range: 2
+  fireRate: 1
+  damage: 50
+  damageType: Electric
+  maxHealth: 300
+  projectilePrefab: {fileID: 0}
+  animator: {fileID: 5065230992946869342}
+--- !u!114 &2674003228836702251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008795341291795614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af299e50e4d425c4ba6d08257950d419, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TowerTest
+  tower: {fileID: 1360104555261791950}
+  shootKey: 53
+  dieKey: 54
+--- !u!95 &5065230992946869342 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 83e5aed6d085e124281f193c02c608b0, type: 3}
+  m_PrefabInstance: {fileID: 1666830394754140623}
+  m_PrefabAsset: {fileID: 0}
