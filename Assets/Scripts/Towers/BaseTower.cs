@@ -18,8 +18,8 @@ public class BaseTower : MonoBehaviour
     //public int upgradesApplied = 0;
 
     [Header("Health")]
-    public int maxHealth = 100;
-    private int currentHealth;
+    public float maxHealth = 100f;
+    private float currentHealth;
 
     public GameObject projectilePrefab;
 
@@ -80,6 +80,13 @@ public class BaseTower : MonoBehaviour
             animator.SetTrigger("ShootTrigger");
     }
 
+    public void TakeDamage(float dmg)
+    {
+        currentHealth -= dmg;
+
+        if (currentHealth <= 0)
+            Die();
+    }
     public void Die()
     {
         if (animator != null)
