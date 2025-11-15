@@ -9,36 +9,72 @@ public class BaseEnemy : MonoBehaviour
     public float damageToTower = 10f;
     public string type = "Normal";
 
+    [Header("References")]
+    public Animator anim;
+
     [HideInInspector] public Transform laneTarget;
 
+    private bool isDead = false;
+    private bool isAttacking = false;
     void Update()
     {
-        if (laneTarget == null) return;
+        if (isDead || isAttacking) return;
 
-        Vector3 targetPos = new Vector3(
-            transform.position.x - speed * Time.deltaTime,
-            laneTarget.position.y,
-            transform.position.z
-        );
-
-        transform.position = targetPos;
+        transform.position += Vector3.left * speed * Time.deltaTime;
     }
 
     public void TakeDamage(int dmg, string dmgType)
     {
+        if (isDead) return;
+
         if (type == "Plant" && dmgType == "Fire") dmg *= 2;
         if (type == "Fire" && dmgType == "Ice") dmg *= 2;
         if (type == "Fire" && dmgType == "Fire") dmg = Mathf.RoundToInt(dmg * 0.5f);
 
         health -= dmg;
-        if (health <= 0) Destroy(gameObject);
+
+        if (health <= 0)
+            Die();
     }
+
+    void Die()
+    {
+        isDead = true;
+        isAttacking = false;
+
+        speed = 0;
+
+        if (anim != null)
+            anim.SetTrigger("DieTrigger");
+
+        Destroy(gameObject, 5f);
+    }
+
     private void OnTriggerStay(Collider other)
     {
+        if (isDead) return;
+
         BaseTower tower = other.GetComponent<BaseTower>();
         if (tower != null)
         {
+            if (!isAttacking)
+            {
+                isAttacking = true;
+
+                if (anim != null)
+                    anim.SetTrigger("AttackTrigger");
+            }
+
             tower.TakeDamage(damageToTower * Time.deltaTime);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        BaseTower tower = other.GetComponent<BaseTower>();
+        if (tower != null && !isDead)
+        {
+            isAttacking = false;
         }
     }
 }
