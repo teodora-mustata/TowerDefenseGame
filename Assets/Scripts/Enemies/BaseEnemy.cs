@@ -20,7 +20,7 @@ public class BaseEnemy : MonoBehaviour
     {
         if (isDead || isAttacking) return;
 
-        transform.position += Vector3.left * speed * Time.deltaTime;
+        transform.position += Vector3.back * speed * Time.deltaTime;
     }
 
     public void TakeDamage(int dmg, string dmgType)

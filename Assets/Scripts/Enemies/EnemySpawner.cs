@@ -37,7 +37,10 @@ public class EnemySpawner : MonoBehaviour
         Transform lane = lanes[Random.Range(0, lanes.Length)];
         EnemySpawnEntry chosen = GetEnemyForCurrentTime(Time.time);
 
-        GameObject enemy = Instantiate(chosen.enemyPrefab, lane.position, Quaternion.identity);
+        Vector3 spawnPos = lane.position;
+        spawnPos.y += chosen.enemyPrefab.transform.position.y;
+
+        GameObject enemy = Instantiate(chosen.enemyPrefab, spawnPos, chosen.enemyPrefab.transform.rotation);
 
         BaseEnemy e = enemy.GetComponent<BaseEnemy>();
         e.laneTarget = lane;
