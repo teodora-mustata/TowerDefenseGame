@@ -1,21 +1,13 @@
-//using UnityEngine;
-
-//public class GridTile : MonoBehaviour
-//{
-//    public bool isEmpty = true;
-//}
-
-
 using UnityEngine;
 
 public class GridTile : MonoBehaviour
 {
     public bool isEmpty = true;
 
-    [Header("Culori highlight")]
-    public Color normalColor = Color.white;
-    public Color canPlaceColor = new Color(0.7f, 1f, 0.7f);  
-    public Color cannotPlaceColor = new Color(1f, 0.6f, 0.6f);  
+    [Header("Highlight colors")]
+    public Color normalColor = new Color(1f, 1f, 1f, 0.2f);
+    public Color canPlaceColor = new Color(0.7f, 1f, 0.7f, 0.2f);
+    public Color cannotPlaceColor = new Color(1f, 0.6f, 0.6f, 0.2f);
 
     private Renderer rend;
 
@@ -23,7 +15,13 @@ public class GridTile : MonoBehaviour
     {
         rend = GetComponent<Renderer>();
         if (rend != null)
+        {
+            rend.material.SetFloat("_Mode", 3); // 3 = Transparent
+            rend.material.EnableKeyword("_ALPHABLEND_ON");
+            rend.material.renderQueue = 3000;
+
             rend.material.color = normalColor;
+        }
     }
 
     void OnMouseEnter()

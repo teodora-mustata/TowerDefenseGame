@@ -1608,7 +1608,6 @@ GameObject:
   - component: {fileID: 701615715616526510}
   - component: {fileID: 3671630552375856183}
   - component: {fileID: 2890086071502107317}
-  - component: {fileID: 3336892414946414642}
   m_Layer: 0
   m_Name: Tower_Erika_Archer
   m_TagString: Untagged
@@ -1701,21 +1700,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3336892414946414642
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6100771743348979110}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af299e50e4d425c4ba6d08257950d419, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tower: {fileID: 3671630552375856183}
-  shootKey: 49
-  dieKey: 50
 --- !u!1 &6198444830410629506
 GameObject:
   m_ObjectHideFlags: 0

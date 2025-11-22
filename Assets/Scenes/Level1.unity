@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 100
+  m_text: 150
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -312,9 +312,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '150
-
-'
+  m_text: 200
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -431,11 +429,11 @@ RectTransform:
   - {fileID: 1706671176}
   m_Father: {fileID: 167433857}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 230}
-  m_Pivot: {x: 0.5, y: 1}
+  m_SizeDelta: {x: 1920, y: 230}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &84601619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -561,7 +559,7 @@ Transform:
   m_GameObject: {fileID: 102084475}
   serializedVersion: 2
   m_LocalRotation: {x: 0.18301274, y: -0.6830127, z: 0.18301274, w: 0.6830127}
-  m_LocalPosition: {x: 40, y: 15, z: 32}
+  m_LocalPosition: {x: 39.664, y: 14.355, z: 29.58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -726,7 +724,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d864d2b64b511047af39f8d0ce73c38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameResources
-  coins: 200
+  coins: 300
   coinsText: {fileID: 182968697}
 --- !u!1 &182968695
 GameObject:
@@ -1268,7 +1266,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a373e5c24fc555e479c34341765ee4b1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7dcc3723ae11086418dfbc6c9d376a91, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1378,7 +1376,7 @@ MonoBehaviour:
   - {fileID: 1250404083}
   - {fileID: 1048572779}
   tilePrefab: {fileID: 7542318766851633145, guid: 7b512402571e7a0469ab5179f01be245, type: 3}
-  columns: 8
+  columns: 10
   spacing: 2
   buildDirection: {x: 0, y: 0, z: -1}
   startOffset: 4
@@ -1391,7 +1389,7 @@ Transform:
   m_GameObject: {fileID: 516613467}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25, y: 5.045, z: 42}
+  m_LocalPosition: {x: 25, y: 5.045, z: 42.39}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1442,12 +1440,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TowerPlacement
   towerPrefabs:
-  - {fileID: 2008795341291795614, guid: e340686b422312442ab0922eeee53d6d, type: 3}
-  - {fileID: 1205842434837970547, guid: c1656cb59002d1341a86c0e9f54c0e6f, type: 3}
   - {fileID: 6100771743348979110, guid: 83d58a519a871a74580835edd74436b1, type: 3}
+  - {fileID: 1205842434837970547, guid: c1656cb59002d1341a86c0e9f54c0e6f, type: 3}
+  - {fileID: 2008795341291795614, guid: e340686b422312442ab0922eeee53d6d, type: 3}
   - {fileID: 4159718042965851168, guid: f95b83962d634c34aafbf9b6bbbe40bc, type: 3}
   - {fileID: 4019748366059403474, guid: 69257eb1d8979754180340fc8f83645c, type: 3}
-  towerCosts: 320000006400000096000000c800000032000000
+  towerCosts: 6400000096000000c8000000af000000c8000000
 --- !u!1 &976209843
 GameObject:
   m_ObjectHideFlags: 0
@@ -1505,7 +1503,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 50
+  m_text: '200
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1644,7 +1644,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7dcc3723ae11086418dfbc6c9d376a91, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a373e5c24fc555e479c34341765ee4b1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1730,8 +1730,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32dc98543431ce24abf3356192e68461, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TowerButton
-  towerPrefab: {fileID: 6100771743348979110, guid: 83d58a519a871a74580835edd74436b1, type: 3}
-  cost: 150
 --- !u!4 &1048572779 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4890572669060901530, guid: 96956d3cbdcb2f4478558bc9b312e6bd, type: 3}
@@ -2301,7 +2299,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '200
+  m_text: '175
 
 '
   m_isRightToLeft: 0
@@ -2508,7 +2506,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 50
+  m_text: '100
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

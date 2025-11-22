@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GridTile
   isEmpty: 1
-  normalColor: {r: 0.8679245, g: 0.7608489, b: 0.42168033, a: 1}
+  normalColor: {r: 0.49685526, g: 0.47930893, b: 0.42342064, a: 1}
   canPlaceColor: {r: 0.7, g: 1, b: 0.7, a: 1}
   cannotPlaceColor: {r: 1, g: 0.6, b: 0.6, a: 1}
 --- !u!64 &5578232282022327898

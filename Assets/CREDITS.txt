@@ -1,0 +1,29 @@
+﻿---------- The team :) ----------
+
+Mustață Teodora
+Peleș Ștefania-Teodora
+Radea Constantin-Sebastian
+
+---------- Assets ----------
+
+--- Tower Assets --- 
+
+Erika Archer with Bow/Arrow - Mixamo
+Eve by J.Gonzales - Mixamo
+Maria W/Prop J J Ong - Mixamo
+Medea by M. Arrebola - Mixamo
+Uriel A Plotexia - Mixamo
+Tower animations - Mixamo
+
+--- Enemy Assets --- 
+
+Jolleen - Mixamo
+Jones - Mixamo
+Mutant - Mixamo
+Nightshade J Friedrich - Mixamo
+Vampire A Lusth - Mixamo
+Enemy animations - Mixamo
+
+--- Other assets --- 
+
+"A slightly different magic fire potion" (https://skfb.ly/oEWEE) by FunWithBlender is licensed under CC Attribution-NonCommercial-NoDerivs (http://creativecommons.org/licenses/by-nc-nd/4.0/).
