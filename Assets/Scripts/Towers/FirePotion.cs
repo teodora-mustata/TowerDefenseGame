@@ -2,21 +2,17 @@ using UnityEngine;
 
 public class FirePotion : MonoBehaviour
 {
-    [HideInInspector] private BaseEnemy target;
+    private BaseEnemy target;
+    private int damage;
+    private string damageType;
 
-    [Header("Stats")]
-    public int damage = 10;
-    public string damageType = "Fire";
-    public float radius = 2f;
-
-    [Header("Movement")]
+    public float radius = 1f;
     public float speed = 10f;
-    public void Init(BaseEnemy t, int dmg, string type, float rad)
+    public void Init(BaseEnemy t, int dmg, string type)
     {
         target = t;
         damage = dmg;
         damageType = type;
-        radius = rad;
     }
 
     void Update()
@@ -41,13 +37,14 @@ public class FirePotion : MonoBehaviour
 
     void Explode()
     {
-
         Collider[] hits = Physics.OverlapSphere(transform.position, radius);
-        foreach (var h in hits)
+        foreach (Collider h in hits)
         {
             BaseEnemy e = h.GetComponent<BaseEnemy>();
             if (e != null)
+            {
                 e.TakeDamage(damage, damageType);
+            }
         }
 
         Destroy(gameObject);

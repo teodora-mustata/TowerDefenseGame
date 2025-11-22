@@ -1693,8 +1693,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ErikaTower
   towerName: Erika Archer
-  range: 10
-  fireRate: 1
+  range: 20
+  fireRate: 0.2
   damage: 25
   damageType: Normal
   maxHealth: 100

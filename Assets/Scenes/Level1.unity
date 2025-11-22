@@ -724,7 +724,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d864d2b64b511047af39f8d0ce73c38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameResources
-  coins: 300
+  coins: 2000
   coinsText: {fileID: 182968697}
 --- !u!1 &182968695
 GameObject:

@@ -317,12 +317,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EveTower
   towerName: Eve
-  range: 10
-  fireRate: 1
+  range: 20
+  fireRate: 0.28
   damage: 50
   damageType: Fire
   maxHealth: 100
-  projectilePrefab: {fileID: 731366288556618398, guid: 0c367a0f2e5aa2645bb91dd10f55ff25, type: 3}
+  projectilePrefab: {fileID: 737722975189141711, guid: e00eb60d69a69c540b2a7a5f3842baaa, type: 3}
   animator: {fileID: 5555189273320652467}
   explosionRadius: 2
   firePoint: {fileID: 4303606149973789585}

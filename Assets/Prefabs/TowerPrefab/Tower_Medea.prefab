@@ -103,7 +103,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 0.05
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2120687187387700061
 MonoBehaviour:
@@ -119,13 +119,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MedeaTower
   towerName: Medea
   range: 3
-  fireRate: 1
-  damage: 25
+  fireRate: 0.3
+  damage: 10
   damageType: Wind
   maxHealth: 150
   projectilePrefab: {fileID: 0}
   animator: {fileID: 7210744577753267424}
-  pushForce: 2
+  pushForce: 3
   slowAmount: 0.5
   slowDuration: 1
 --- !u!95 &7210744577753267424 stripped

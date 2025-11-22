@@ -106,9 +106,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UrielTower
   towerName: Uriel
-  range: 1
-  fireRate: 1
-  damage: 25
+  range: 2
+  fireRate: 0.2
+  damage: 20
   damageType: Normal
   maxHealth: 500
   projectilePrefab: {fileID: 0}

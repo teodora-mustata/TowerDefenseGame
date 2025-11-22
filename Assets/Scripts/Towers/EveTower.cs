@@ -10,7 +10,7 @@ public class EveTower : BaseTower
         GameObject proj = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
         FirePotion projScript = proj.GetComponent<FirePotion>();
 
-        projScript.Init(target, damage, damageType, explosionRadius);
+        projScript.Init(target, damage, damageType);
 
         if (animator != null)
             animator.SetTrigger("ShootTrigger");

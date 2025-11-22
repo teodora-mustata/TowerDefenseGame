@@ -62,7 +62,7 @@ public class BaseEnemy : MonoBehaviour
                 isAttacking = true;
 
                 if (anim != null)
-                    anim.SetTrigger("AttackTrigger");
+                    anim.SetBool("isAttacking", true);
             }
 
             tower.TakeDamage(damageToTower * Time.deltaTime);
@@ -75,6 +75,10 @@ public class BaseEnemy : MonoBehaviour
         if (tower != null && !isDead)
         {
             isAttacking = false;
+
+            if (anim != null)
+                anim.SetBool("isAttacking", false);
         }
     }
+
 }

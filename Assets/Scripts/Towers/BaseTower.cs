@@ -57,21 +57,25 @@ public abstract class BaseTower : MonoBehaviour
     {
         BaseEnemy[] enemies = FindObjectsOfType<BaseEnemy>();
         BaseEnemy best = null;
-        float bestDist = Mathf.Infinity;
+        float bestZ = Mathf.Infinity;
 
         foreach (var e in enemies)
         {
-            float dist = Vector3.Distance(transform.position, e.transform.position);
-            if (dist > range) continue;
+            if (Mathf.Abs(e.transform.position.x - transform.position.x) > 0.5f)
+                continue;
 
-            if (e.transform.position.x < transform.position.x) continue;
+            float dz = e.transform.position.z - transform.position.z;
 
-            if (Mathf.Abs(e.transform.position.z - transform.position.z) > 0.5f) continue;
+            if (dz < 0)
+                continue;
 
-            if (dist < bestDist)
+            if (dz > range)
+                continue;
+
+            if (dz < bestZ)
             {
+                bestZ = dz;
                 best = e;
-                bestDist = dist;
             }
         }
 

@@ -8,18 +8,21 @@ public class MedeaTower : BaseTower
 
     protected override void Attack(BaseEnemy target)
     {
-        RaycastHit[] hits = Physics.RaycastAll(
-            transform.position,
-            transform.forward,
-            range
+        Vector3 boxCenter = transform.position + transform.forward * (range / 2f);
+        Vector3 boxSize = new Vector3(1f, 1f, range / 2f);
+
+        Collider[] hits = Physics.OverlapBox(
+            boxCenter,
+            boxSize,
+            transform.rotation
         );
 
         foreach (var h in hits)
         {
-            BaseEnemy e = h.collider.GetComponent<BaseEnemy>();
+            BaseEnemy e = h.GetComponent<BaseEnemy>();
             if (e != null)
             {
-                e.transform.position += Vector3.right * pushForce;
+                e.transform.position += transform.forward * pushForce;
                 e.speed *= slowAmount;
             }
         }

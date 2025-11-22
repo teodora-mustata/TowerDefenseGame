@@ -106,14 +106,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MariaTower
   towerName: Maria
-  range: 1
+  range: 2
   fireRate: 0.5
   damage: 75
   damageType: Normal
   maxHealth: 250
   projectilePrefab: {fileID: 0}
   animator: {fileID: 5065230992946869342}
-  meleeRange: 1
 --- !u!95 &5065230992946869342 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 83e5aed6d085e124281f193c02c608b0, type: 3}
