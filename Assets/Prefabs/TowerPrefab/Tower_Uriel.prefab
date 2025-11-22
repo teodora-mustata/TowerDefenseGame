@@ -62,54 +62,16 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3a108ddb2b4bee14faafc9f8c91b13cd, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1729724035068522946}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3a108ddb2b4bee14faafc9f8c91b13cd, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 708020590884465443}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3a108ddb2b4bee14faafc9f8c91b13cd, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 8391040255793307914}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3a108ddb2b4bee14faafc9f8c91b13cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4201901778805408543}
   m_SourcePrefab: {fileID: 100100000, guid: 3a108ddb2b4bee14faafc9f8c91b13cd, type: 3}
 --- !u!1 &4019748366059403474 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3a108ddb2b4bee14faafc9f8c91b13cd, type: 3}
   m_PrefabInstance: {fileID: 4253766424224351619}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1729724035068522946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4019748366059403474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 669deb7925e60124d9100a5d4812ea22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BaseTower
-  towerName: Uriel
-  range: 5
-  fireRate: 1
-  damage: 40
-  damageType: Fire
-  maxHealth: 400
-  projectilePrefab: {fileID: 0}
-  animator: {fileID: 7665970644879734802}
---- !u!114 &708020590884465443
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4019748366059403474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af299e50e4d425c4ba6d08257950d419, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TowerTest
-  tower: {fileID: 1729724035068522946}
-  shootKey: 57
-  dieKey: 48
 --- !u!135 &8391040255793307914
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -131,6 +93,28 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4201901778805408543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4019748366059403474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80f63a3b026f1f7469a89c73fd270c09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UrielTower
+  towerName: Uriel
+  range: 1
+  fireRate: 1
+  damage: 25
+  damageType: Normal
+  maxHealth: 500
+  projectilePrefab: {fileID: 0}
+  animator: {fileID: 7665970644879734802}
+  explosionRadius: 2
+  explosionDamage: 150
 --- !u!95 &7665970644879734802 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 3a108ddb2b4bee14faafc9f8c91b13cd, type: 3}

@@ -1606,8 +1606,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6908973999602937628}
   - component: {fileID: 701615715616526510}
-  - component: {fileID: 3671630552375856183}
   - component: {fileID: 2890086071502107317}
+  - component: {fileID: 1520953070610059311}
   m_Layer: 0
   m_Name: Tower_Erika_Archer
   m_TagString: Untagged
@@ -1624,7 +1624,7 @@ Transform:
   m_GameObject: {fileID: 6100771743348979110}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 17.53989, y: 4.99908, z: 33.08036}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1658,26 +1658,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3671630552375856183
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6100771743348979110}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 669deb7925e60124d9100a5d4812ea22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  towerName: Erika Archer
-  range: 10
-  fireRate: 2
-  damage: 10
-  damageType: Normal
-  maxHealth: 100
-  projectilePrefab: {fileID: 5238414935593990817, guid: 714ab6d884c7aa444849cc7b418f5608, type: 3}
-  animator: {fileID: 2890086071502107317}
 --- !u!95 &2890086071502107317
 Animator:
   serializedVersion: 7
@@ -1700,6 +1680,27 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1520953070610059311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6100771743348979110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd3048f360828274990b118b1f82f4d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ErikaTower
+  towerName: Erika Archer
+  range: 10
+  fireRate: 1
+  damage: 25
+  damageType: Normal
+  maxHealth: 100
+  projectilePrefab: {fileID: 5238414935593990817, guid: 714ab6d884c7aa444849cc7b418f5608, type: 3}
+  animator: {fileID: 2890086071502107317}
+  firePoint: {fileID: 704318037859598448}
 --- !u!1 &6198444830410629506
 GameObject:
   m_ObjectHideFlags: 0

@@ -77,10 +77,7 @@ PrefabInstance:
       addedObject: {fileID: 2372323060877224633}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6245d5c30667545489cc6e4e8b654932, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5647870876004222911}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6245d5c30667545489cc6e4e8b654932, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1465425151554831480}
+      addedObject: {fileID: 2120687187387700061}
   m_SourcePrefab: {fileID: 100100000, guid: 6245d5c30667545489cc6e4e8b654932, type: 3}
 --- !u!1 &4159718042965851168 stripped
 GameObject:
@@ -108,7 +105,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5647870876004222911
+--- !u!114 &2120687187387700061
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -117,32 +114,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 4159718042965851168}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 669deb7925e60124d9100a5d4812ea22, type: 3}
+  m_Script: {fileID: 11500000, guid: 476806a72aaa41f46b73f7098ceeb69b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BaseTower
+  m_EditorClassIdentifier: Assembly-CSharp::MedeaTower
   towerName: Medea
-  range: 5
+  range: 3
   fireRate: 1
-  damage: 10
-  damageType: Normal
-  maxHealth: 200
+  damage: 25
+  damageType: Wind
+  maxHealth: 150
   projectilePrefab: {fileID: 0}
   animator: {fileID: 7210744577753267424}
---- !u!114 &1465425151554831480
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4159718042965851168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af299e50e4d425c4ba6d08257950d419, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TowerTest
-  tower: {fileID: 5647870876004222911}
-  shootKey: 55
-  dieKey: 56
+  pushForce: 2
+  slowAmount: 0.5
+  slowDuration: 1
 --- !u!95 &7210744577753267424 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 6245d5c30667545489cc6e4e8b654932, type: 3}

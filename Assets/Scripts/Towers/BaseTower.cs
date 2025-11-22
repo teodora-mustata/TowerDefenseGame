@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BaseTower : MonoBehaviour
+public abstract class BaseTower : MonoBehaviour
 {
     [Header("Stats")]
     public string towerName = "Basic Tower";
@@ -27,12 +27,12 @@ public class BaseTower : MonoBehaviour
 
     public Animator animator;
 
-    void Start()
+    protected virtual void Start()
     {
         currentHealth = maxHealth;
     }
 
-    public void TakeDamage(int dmg)
+    public void TakeDamage(float dmg)
     {
         currentHealth -= dmg;
         if (currentHealth <= 0)
@@ -44,50 +44,42 @@ public class BaseTower : MonoBehaviour
     {
         if (Time.time >= nextFireTime)
         {
-            BaseEnemy target = FindClosestEnemy();
+            BaseEnemy target = FindEnemyInFront();
             if (target != null)
             {
-                Shoot(target);
+                Attack(target);
                 nextFireTime = Time.time + 1f / fireRate;
             }
         }
     }
 
-    BaseEnemy FindClosestEnemy()
+    protected BaseEnemy FindEnemyInFront()
     {
         BaseEnemy[] enemies = FindObjectsOfType<BaseEnemy>();
-        float closestDist = range;
-        BaseEnemy closest = null;
+        BaseEnemy best = null;
+        float bestDist = Mathf.Infinity;
 
-        foreach (BaseEnemy e in enemies)
+        foreach (var e in enemies)
         {
             float dist = Vector3.Distance(transform.position, e.transform.position);
-            if (dist < closestDist)
+            if (dist > range) continue;
+
+            if (e.transform.position.x < transform.position.x) continue;
+
+            if (Mathf.Abs(e.transform.position.z - transform.position.z) > 0.5f) continue;
+
+            if (dist < bestDist)
             {
-                closestDist = dist;
-                closest = e;
+                best = e;
+                bestDist = dist;
             }
         }
-        return closest;
+
+        return best;
     }
 
-    void Shoot(BaseEnemy target)
-    {
-        GameObject proj = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
-        proj.GetComponent<Projectile>().Init(target, damage, damageType);
-
-        if (animator != null)
-            animator.SetTrigger("ShootTrigger");
-    }
-
-    public void TakeDamage(float dmg)
-    {
-        currentHealth -= dmg;
-
-        if (currentHealth <= 0)
-            Die();
-    }
-    public void Die()
+    protected abstract void Attack(BaseEnemy target);
+    public virtual void Die()
     {
         if (animator != null)
             animator.SetTrigger("DieTrigger");
