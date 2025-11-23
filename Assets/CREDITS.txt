@@ -27,3 +27,4 @@ Enemy animations - Mixamo
 --- Other assets --- 
 
 "A slightly different magic fire potion" (https://skfb.ly/oEWEE) by FunWithBlender is licensed under CC Attribution-NonCommercial-NoDerivs (http://creativecommons.org/licenses/by-nc-nd/4.0/).
+Coin drop - https://www.freepik.com/free-vector/indian-rupee-gold-coin-stack_3468794.htm#fromView=keyword&page=2&position=45&uuid=54a28e72-ad23-4a0f-90d2-ef4749411f70&query=Coin+sprite

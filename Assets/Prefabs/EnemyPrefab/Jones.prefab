@@ -149,5 +149,7 @@ MonoBehaviour:
   health: 100
   damageToTower: 10
   type: Normal
+  coinDropPrefab: {fileID: 2096973821894285698, guid: 959e569912df4af4b8732e6750cd3fc3, type: 3}
+  coinReward: 200
   anim: {fileID: 1716067837489554742}
   laneTarget: {fileID: 0}

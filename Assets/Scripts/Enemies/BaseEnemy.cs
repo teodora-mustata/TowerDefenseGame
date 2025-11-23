@@ -9,6 +9,10 @@ public class BaseEnemy : MonoBehaviour
     public float damageToTower = 10f;
     public string type = "Normal";
 
+    public GameObject coinDropPrefab;
+    public int coinReward = 10;
+
+
     [Header("References")]
     public Animator anim;
 
@@ -46,6 +50,13 @@ public class BaseEnemy : MonoBehaviour
 
         if (anim != null)
             anim.SetTrigger("DieTrigger");
+
+        if (coinDropPrefab != null)
+        {
+            Vector3 dropPos = transform.position + Vector3.up * 0.3f;
+            GameObject drop = Instantiate(coinDropPrefab, dropPos, Quaternion.identity);
+            drop.GetComponent<CoinDrop>().coinValue = coinReward;
+        }
 
         Destroy(gameObject, 5f);
     }
