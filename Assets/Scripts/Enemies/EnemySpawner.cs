@@ -1,4 +1,5 @@
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.Events;
 
 [System.Serializable]
 public class EnemySpawnEntry
@@ -11,21 +12,31 @@ public class EnemySpawnEntry
 public class SpawnPhase
 {
     public float startTime;
+    public float spawnInterval;
     public EnemySpawnEntry[] enemies;
 }
+
 
 public class EnemySpawner : MonoBehaviour
 {
     public SpawnPhase[] phases;
     public Transform[] lanes;
 
-    public float spawnInterval = 2f;
+    public float levelDuration = 60f;
+
     private float timer;
+
+    public UnityEvent<float> OnProgressChanged;
 
     void Update()
     {
+        float progress = Mathf.Clamp01(Time.time / levelDuration);
+        OnProgressChanged?.Invoke(progress);
+
+        SpawnPhase phase = GetPhaseForTime(Time.time);
+
         timer += Time.deltaTime;
-        if (timer >= spawnInterval)
+        if (timer >= phase.spawnInterval)
         {
             SpawnEnemy();
             timer = 0;
@@ -46,15 +57,20 @@ public class EnemySpawner : MonoBehaviour
         e.laneTarget = lane;
     }
 
-    EnemySpawnEntry GetEnemyForCurrentTime(float time)
+    SpawnPhase GetPhaseForTime(float time)
     {
         SpawnPhase active = phases[0];
 
         foreach (var p in phases)
-        {
             if (time >= p.startTime)
                 active = p;
-        }
+
+        return active;
+    }
+
+    EnemySpawnEntry GetEnemyForCurrentTime(float time)
+    {
+        SpawnPhase active = GetPhaseForTime(time);
 
         float total = 0;
         foreach (var e in active.enemies)
@@ -73,3 +89,4 @@ public class EnemySpawner : MonoBehaviour
         return active.enemies[0];
     }
 }
+

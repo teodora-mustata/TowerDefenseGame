@@ -3,6 +3,7 @@ using UnityEngine;
 public class GridTile : MonoBehaviour
 {
     public bool isEmpty = true;
+    public BaseTower currentTower;
 
     [Header("Highlight colors")]
     public Color normalColor = new Color(1f, 1f, 1f, 0.2f);

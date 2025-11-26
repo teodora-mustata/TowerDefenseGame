@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BaseEnemy
   enemyName: NightShade
-  speed: 3
+  speed: 1.3
   health: 300
   damageToTower: 20
   type: Normal
