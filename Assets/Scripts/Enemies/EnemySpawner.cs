@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 [System.Serializable]
 public class EnemySpawnEntry
@@ -21,10 +22,17 @@ public class EnemySpawner : MonoBehaviour
     public SpawnPhase[] phases;
     public Transform[] lanes;
 
+    public float levelDuration = 60f;
+
     private float timer;
+
+    public UnityEvent<float> OnProgressChanged;
 
     void Update()
     {
+        float progress = Mathf.Clamp01(Time.time / levelDuration);
+        OnProgressChanged?.Invoke(progress);
+
         SpawnPhase phase = GetPhaseForTime(Time.time);
 
         timer += Time.deltaTime;
