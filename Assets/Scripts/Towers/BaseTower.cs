@@ -27,6 +27,7 @@ public abstract class BaseTower : MonoBehaviour
 
     public Animator animator;
 
+    public GridTile placedTile;
     protected virtual void Start()
     {
         currentHealth = maxHealth;
@@ -87,6 +88,12 @@ public abstract class BaseTower : MonoBehaviour
     {
         if (animator != null)
             animator.SetTrigger("DieTrigger");
+
+        if (placedTile != null)
+        {
+            placedTile.isEmpty = true;
+            placedTile.currentTower = null;
+        }
 
         Destroy(gameObject, 5f);
     }

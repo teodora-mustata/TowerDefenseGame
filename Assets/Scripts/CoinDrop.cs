@@ -3,8 +3,8 @@ using UnityEngine;
 public class CoinDrop : MonoBehaviour
 {
     public int coinValue = 10;
-    public float lifeTime = 6f;           // cât timp st? pe hart?
-    public float flickerStartTime = 4f;   // când începe s? pâlpâie
+    public float lifeTime = 6f;
+    public float flickerStartTime = 4f;
 
     private bool collected = false;
     private Renderer rend;
@@ -12,11 +12,7 @@ public class CoinDrop : MonoBehaviour
     void Start()
     {
         rend = GetComponentInChildren<Renderer>();
-
-        // începe s? pâlpâie înainte s? dispar?
         Invoke(nameof(StartFlicker), flickerStartTime);
-
-        // dispare singur? dac? nu e colectat?
         Destroy(gameObject, lifeTime);
     }
 
@@ -26,7 +22,6 @@ public class CoinDrop : MonoBehaviour
 
         collected = true;
 
-        // ad?ug?m monede prin GameResources
         if (GameResources.Instance != null)
             GameResources.Instance.AddCoins(coinValue);
 

@@ -27,6 +27,12 @@ public class UrielTower : BaseTower
         if (animator != null)
             animator.SetTrigger("DieTrigger");
 
+        if (placedTile != null)
+        {
+            placedTile.isEmpty = true;
+            placedTile.currentTower = null;
+        }
+
         Destroy(gameObject, 3f);
     }
 }
