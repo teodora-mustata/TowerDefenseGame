@@ -88,7 +88,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BaseEnemy
   enemyName: Mutant
-  speed: 1
+  speed: 0.5
   health: 400
   damageToTower: 10
   type: Normal

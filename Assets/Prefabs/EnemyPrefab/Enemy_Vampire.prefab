@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BaseEnemy
   enemyName: Vampire
-  speed: 5
+  speed: 2
   health: 200
   damageToTower: 10
   type: Dark

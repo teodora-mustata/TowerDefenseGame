@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BaseEnemy
   enemyName: Jolleen
-  speed: 2
+  speed: 0.8
   health: 100
   damageToTower: 10
   type: Plant
