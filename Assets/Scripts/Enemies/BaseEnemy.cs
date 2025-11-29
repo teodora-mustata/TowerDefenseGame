@@ -20,9 +20,74 @@ public class BaseEnemy : MonoBehaviour
 
     private bool isDead = false;
     private bool isAttacking = false;
+
+    private bool isFrozen = false;
+    private bool enteringBase = false;
+
+    private bool beingPulled = false;
+    private Vector3 pullTarget;
+    public float pullSpeed = 4f;
+
+
+    public void StartPullToCenter(Vector3 target)
+    {
+        beingPulled = true;
+        pullTarget = target;
+        isFrozen = false;
+        isAttacking = false;
+    }
+
+    public void Freeze()
+    {
+        if (beingPulled || enteringBase) return;
+        isFrozen = true;
+    }
+
+    public void StartEnteringBase()
+    {
+        enteringBase = true;
+        isFrozen = false;
+        isAttacking = false;
+    }
+
     void Update()
     {
-        if (isDead || isAttacking) return;
+
+        if (isFrozen)
+            return;
+
+       
+        if (beingPulled)
+        {
+            transform.position = Vector3.MoveTowards(
+                transform.position,
+                pullTarget,
+                pullSpeed * Time.deltaTime
+            );
+
+            if (Vector3.Distance(transform.position, pullTarget) < 0.1f)
+            {
+                beingPulled = false;
+                StartEnteringBase(); 
+            }
+
+            return; 
+        }
+
+        if (enteringBase)
+        {
+            transform.Translate(transform.forward * Time.deltaTime * 1f, Space.World);
+
+            if (Vector3.Distance(transform.position, GameFlow.Instance.transform.position) < 1.5f)
+            {
+                GameFlow.Instance.TriggerGameOver();
+            }
+
+            return;
+        }
+
+        if ((isDead || isAttacking) && !beingPulled && !enteringBase)
+            return;
 
         transform.position += Vector3.back * speed * Time.deltaTime;
     }

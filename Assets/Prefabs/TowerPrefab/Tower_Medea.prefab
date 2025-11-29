@@ -99,7 +99,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -125,6 +125,7 @@ MonoBehaviour:
   maxHealth: 150
   projectilePrefab: {fileID: 0}
   animator: {fileID: 7210744577753267424}
+  placedTile: {fileID: 0}
   pushForce: 3
   slowAmount: 0.5
   slowDuration: 1

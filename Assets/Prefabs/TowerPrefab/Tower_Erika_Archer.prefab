@@ -1700,6 +1700,7 @@ MonoBehaviour:
   maxHealth: 100
   projectilePrefab: {fileID: 5238414935593990817, guid: 714ab6d884c7aa444849cc7b418f5608, type: 3}
   animator: {fileID: 2890086071502107317}
+  placedTile: {fileID: 0}
   firePoint: {fileID: 704318037859598448}
 --- !u!1 &6198444830410629506
 GameObject:
