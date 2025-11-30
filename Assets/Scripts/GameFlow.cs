@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class GameFlow : MonoBehaviour
@@ -36,5 +37,29 @@ public class GameFlow : MonoBehaviour
     {
         Debug.Log("GAME OVER!");
         GameOverUI.Instance.Show();
+    }
+
+    public void TriggerGameWin()
+    {
+        GameWinUI.Instance.Show();
+
+        StartCoroutine(HandleGameWin());
+    }
+
+    private IEnumerator HandleGameWin()
+    {
+        yield return null;
+
+        EnemySpawner spawner = FindFirstObjectByType<EnemySpawner>();
+        if (spawner != null)
+            spawner.enabled = false;
+
+        BaseEnemy[] enemies = FindObjectsByType<BaseEnemy>(FindObjectsSortMode.None);
+        foreach (var e in enemies)
+            Destroy(e.gameObject);
+
+        BaseTower[] towers = FindObjectsByType<BaseTower>(FindObjectsSortMode.None);
+        foreach (var t in towers)
+            t.enabled = false;
     }
 }
