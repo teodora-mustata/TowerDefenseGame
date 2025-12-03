@@ -18,12 +18,10 @@ public class ProgressBar : MonoBehaviour
         float progress = Mathf.Clamp01(elapsedTime / spawner.levelDuration);
         fillImage.fillAmount = progress;
 
-        if (progress >= 0.1f)
+        if (progress >= 1f)
         {
             triggeredWin = true;
             GameFlow.Instance.TriggerGameWin();
         }
-
-
     }
 }
