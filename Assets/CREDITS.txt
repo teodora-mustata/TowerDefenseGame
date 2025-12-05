@@ -24,6 +24,16 @@ Nightshade J Friedrich - Mixamo
 Vampire A Lusth - Mixamo
 Enemy animations - Mixamo
 
+--- Music ---
+
+Youtube Studio Audio Library
+Menu Music: Rapid Unscheduled Disassembly - The Grey Room _ Density & Time
+Level1 Music: Sparse Clouds - Quincas Moreira
+Level2 Music: Campo Gitano - House of the Gipsies
+Level3 Music: Moritas Moras - House of the Gipsies
+Level4 Music: March of the Hares - Nathan Moore
+Level5 Music: Series Of Plans - Riot
+
 --- Other assets --- 
 
 "A slightly different magic fire potion" (https://skfb.ly/oEWEE) by FunWithBlender is licensed under CC Attribution-NonCommercial-NoDerivs (http://creativecommons.org/licenses/by-nc-nd/4.0/).
