@@ -1,4 +1,85 @@
+//using UnityEngine;
+//public class TowerPlacement : MonoBehaviour
+//{
+//    public static TowerPlacement Instance;
+
+//    [Header("Tower Settings")]
+//    public GameObject[] towerPrefabs;
+//    public int[] towerCosts;
+
+//    private GameObject selectedTower;
+//    private int selectedCost;
+
+//    void Awake()
+//    {
+//        Instance = this;
+//    }
+
+//    public void SelectTower(int towerIndex)
+//    {
+//        selectedTower = towerPrefabs[towerIndex];
+//        selectedCost = towerCosts[towerIndex];
+//    }
+
+//    void Update()
+//    {
+//        if (Input.GetMouseButtonDown(1))
+//        {
+//            selectedTower = null;
+//            return;
+//        }
+
+//        if (Input.GetMouseButtonDown(0) && selectedTower != null)
+//        {
+//            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+//            if (Physics.Raycast(ray, out RaycastHit hit, 200f))
+//            {
+//                GridTile tile = hit.collider.GetComponent<GridTile>();
+
+//                if (tile != null && tile.isEmpty)
+//                {
+//                    if (GameResources.Instance.SpendCoins(selectedCost))
+//                    {
+//                        GameObject newTower = Instantiate(selectedTower, tile.transform.position, Quaternion.identity);
+
+//                        BaseTower tower = newTower.GetComponent<BaseTower>();
+//                        tower.placedTile = tile;
+
+//                        tile.isEmpty = false;
+//                        tile.currentTower = tower;
+
+//                    }
+//                    else
+//                    {
+//                        Debug.Log("Not enough coins!");
+//                    }
+//                }
+
+//                selectedTower = null;
+//            }
+//        }
+//    }
+
+//    public bool CanPlaceOnTile(GridTile tile)
+//    {
+//        if (selectedTower == null) return false;
+//        if (tile == null || !tile.isEmpty) return false;
+
+//        if (GameResources.Instance != null &&
+//            GameResources.Instance.CurrentCoins < selectedCost)
+//            return false;
+
+//        return true;
+//    }
+
+//}
+
+
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
+
 public class TowerPlacement : MonoBehaviour
 {
     public static TowerPlacement Instance;
@@ -7,70 +88,162 @@ public class TowerPlacement : MonoBehaviour
     public GameObject[] towerPrefabs;
     public int[] towerCosts;
 
+    [Header("Ghost Settings (UI Overlay)")]
+    public GameObject ghost2DPrefab;        
+    public Canvas targetCanvas;             
+    public float ghostScreenScale = 1.0f;   
+    public Vector2 ghostImageSize = new Vector2(100, 100);
+    public bool ignoreUIBlocking = true;    
+
+    private GameObject currentGhost;
+    private RectTransform ghostRect;
+    private Image ghostImage;
+    private RectTransform ghostImageRect;
+
     private GameObject selectedTower;
     private int selectedCost;
 
-    void Awake()
-    {
-        Instance = this;
-    }
+    void Awake() => Instance = this;
 
     public void SelectTower(int towerIndex)
     {
         selectedTower = towerPrefabs[towerIndex];
         selectedCost = towerCosts[towerIndex];
+        CreateGhost();
     }
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(1))
+        if (selectedTower == null)
         {
-            selectedTower = null;
+            DestroyGhost();
             return;
         }
 
-        if (Input.GetMouseButtonDown(0) && selectedTower != null)
+        UpdateGhostPosition();
+
+        if (Input.GetMouseButtonDown(1))
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            selectedTower = null;
+            DestroyGhost();
+        }
 
-            if (Physics.Raycast(ray, out RaycastHit hit, 200f))
+        if (Input.GetMouseButtonDown(0))
+            TryPlaceTower();
+    }
+
+    void CreateGhost()
+    {
+        DestroyGhost();
+        if (ghost2DPrefab == null) return;
+
+         
+        if (targetCanvas == null)
+            targetCanvas = FindObjectOfType<Canvas>();
+
+         
+        if (targetCanvas != null)
+            currentGhost = Instantiate(ghost2DPrefab, targetCanvas.transform);
+        else
+            currentGhost = Instantiate(ghost2DPrefab);  
+
+        currentGhost.SetActive(true);
+
+        ghostRect = currentGhost.GetComponent<RectTransform>();
+        if (ghostRect == null)
+            ghostRect = currentGhost.GetComponentInChildren<RectTransform>();
+
+        ghostImage = currentGhost.GetComponentInChildren<Image>();
+        ghostImageRect = ghostImage ? ghostImage.GetComponent<RectTransform>() : null;
+
+        ResetRect(ghostRect);
+        ResetRect(ghostImageRect);
+
+        if (ghostImageRect != null)
+            ghostImageRect.sizeDelta = ghostImageSize;
+        if (ghostImage != null)
+            ghostImage.raycastTarget = false; 
+
+        float s = Mathf.Clamp(ghostScreenScale, 0.01f, 10f);
+        currentGhost.transform.localScale = Vector3.one * s;
+
+        UpdateGhostPosition(); 
+    }
+
+    void ResetRect(RectTransform rt)
+    {
+        if (rt == null) return;
+        rt.anchorMin = rt.anchorMax = new Vector2(0.5f, 0.5f);
+        rt.pivot = new Vector2(0.5f, 0.5f);
+        rt.anchoredPosition = Vector2.zero;
+        rt.localPosition = Vector3.zero;
+        rt.localRotation = Quaternion.identity;
+        rt.localScale = Vector3.one;
+    }
+
+    void DestroyGhost()
+    {
+        if (currentGhost != null) Destroy(currentGhost);
+        currentGhost = null;
+        ghostRect = null;
+        ghostImage = null;
+        ghostImageRect = null;
+    }
+
+    void UpdateGhostPosition()
+    {
+        if (ghostRect == null)
+            return;
+
+        if (targetCanvas != null)
+        {
+            RectTransform canvasRect = targetCanvas.GetComponent<RectTransform>();
+            if (canvasRect != null)
             {
-                GridTile tile = hit.collider.GetComponent<GridTile>();
+                Vector2 localPoint;
+                bool isOverlay = targetCanvas.renderMode == RenderMode.ScreenSpaceOverlay;
+                Camera cam = isOverlay ? null : targetCanvas.worldCamera;
+                RectTransformUtility.ScreenPointToLocalPointInRectangle(
+                    canvasRect, Input.mousePosition, cam, out localPoint);
+                ghostRect.anchoredPosition = localPoint;
+                return;
+            }
+        }
 
-                if (tile != null && tile.isEmpty)
+        ghostRect.position = Input.mousePosition;
+    }
+
+    void TryPlaceTower()
+    {
+        if (!ignoreUIBlocking && EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
+            return;
+
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out RaycastHit hit, 1000f))
+        {
+            GridTile tile = hit.collider.GetComponent<GridTile>();
+            if (tile != null && CanPlaceOnTile(tile))
+            {
+                if (GameResources.Instance.SpendCoins(selectedCost))
                 {
-                    if (GameResources.Instance.SpendCoins(selectedCost))
-                    {
-                        GameObject newTower = Instantiate(selectedTower, tile.transform.position, Quaternion.identity);
+                    var tower = Instantiate(selectedTower, tile.transform.position, Quaternion.identity);
+                    var bt = tower.GetComponent<BaseTower>();
+                    bt.placedTile = tile;
 
-                        BaseTower tower = newTower.GetComponent<BaseTower>();
-                        tower.placedTile = tile;
+                    tile.isEmpty = false;
+                    tile.currentTower = bt;
 
-                        tile.isEmpty = false;
-                        tile.currentTower = tower;
-
-                    }
-                    else
-                    {
-                        Debug.Log("Not enough coins!");
-                    }
+                    DestroyGhost();
+                    selectedTower = null;
                 }
-
-                selectedTower = null;
             }
         }
     }
 
     public bool CanPlaceOnTile(GridTile tile)
     {
-        if (selectedTower == null) return false;
-        if (tile == null || !tile.isEmpty) return false;
-
-        if (GameResources.Instance != null &&
-            GameResources.Instance.CurrentCoins < selectedCost)
-            return false;
-
+        if (selectedTower == null || tile == null || !tile.isEmpty) return false;
+        if (GameResources.Instance.CurrentCoins < selectedCost) return false;
         return true;
     }
-
 }
