@@ -404,132 +404,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1097187352924875849, guid: 41354c5e46305514e84b8f2453a79a19, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1614744105008308113, guid: 41354c5e46305514e84b8f2453a79a19, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1614744105008308113, guid: 41354c5e46305514e84b8f2453a79a19, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1614744105008308113, guid: 41354c5e46305514e84b8f2453a79a19, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1614744105008308113, guid: 41354c5e46305514e84b8f2453a79a19, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1897881500631188898, guid: 41354c5e46305514e84b8f2453a79a19, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1927462691}
-    - target: {fileID: 1897881500631188898, guid: 41354c5e46305514e84b8f2453a79a19, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SelectTower
-      objectReference: {fileID: 0}
-    - target: {fileID: 2640273733812185410, guid: 41354c5e46305514e84b8f2453a79a19, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 7881d8843c63cc64cb263e3c35fdd1a0, type: 3}
-    - target: {fileID: 2640273733812185410, guid: 41354c5e46305514e84b8f2453a79a19, type: 3}
-      propertyPath: m_Color.b
-      value: 0.50628924
-      objectReference: {fileID: 0}
-    - target: {fileID: 2640273733812185410, guid: 41354c5e46305514e84b8f2453a79a19, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2640273733812185410, guid: 41354c5e46305514e84b8f2453a79a19, type: 3}
-      propertyPath: m_Color.r
-      value: 0.54307556
-      objectReference: {fileID: 0}
-    - target: {fileID: 3142690504730862600, guid: 41354c5e46305514e84b8f2453a79a19, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -110
-      objectReference: {fileID: 0}
     - target: {fileID: 4168795387127282427, guid: 41354c5e46305514e84b8f2453a79a19, type: 3}
       propertyPath: m_Name
       value: MenuBar
       objectReference: {fileID: 0}
-    - target: {fileID: 4368322693858962757, guid: 41354c5e46305514e84b8f2453a79a19, type: 3}
-      propertyPath: m_text
-      value: 'YOU WON!
-
-'
-      objectReference: {fileID: 0}
-    - target: {fileID: 4368322693858962757, guid: 41354c5e46305514e84b8f2453a79a19, type: 3}
-      propertyPath: m_fontSize
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 4368322693858962757, guid: 41354c5e46305514e84b8f2453a79a19, type: 3}
-      propertyPath: m_fontStyle
-      value: 33
-      objectReference: {fileID: 0}
-    - target: {fileID: 4368322693858962757, guid: 41354c5e46305514e84b8f2453a79a19, type: 3}
-      propertyPath: m_fontColor.b
-      value: 0.19585991
-      objectReference: {fileID: 0}
-    - target: {fileID: 4368322693858962757, guid: 41354c5e46305514e84b8f2453a79a19, type: 3}
-      propertyPath: m_fontColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4368322693858962757, guid: 41354c5e46305514e84b8f2453a79a19, type: 3}
-      propertyPath: m_fontColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4368322693858962757, guid: 41354c5e46305514e84b8f2453a79a19, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 4368322693858962757, guid: 41354c5e46305514e84b8f2453a79a19, type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 4281467135
-      objectReference: {fileID: 0}
-    - target: {fileID: 4406399028580532070, guid: 41354c5e46305514e84b8f2453a79a19, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5423127783981465205, guid: 41354c5e46305514e84b8f2453a79a19, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1927462691}
-    - target: {fileID: 5423127783981465205, guid: 41354c5e46305514e84b8f2453a79a19, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SelectTower
-      objectReference: {fileID: 0}
-    - target: {fileID: 5601011653475644296, guid: 41354c5e46305514e84b8f2453a79a19, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6071099418295272274, guid: 41354c5e46305514e84b8f2453a79a19, type: 3}
-      propertyPath: m_text
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 6894991756489434547, guid: 41354c5e46305514e84b8f2453a79a19, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 1500
-      objectReference: {fileID: 0}
-    - target: {fileID: 6894991756489434547, guid: 41354c5e46305514e84b8f2453a79a19, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 6979614364412105578, guid: 41354c5e46305514e84b8f2453a79a19, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6979614364412105578, guid: 41354c5e46305514e84b8f2453a79a19, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6979614364412105578, guid: 41354c5e46305514e84b8f2453a79a19, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8829353283231229955, guid: 41354c5e46305514e84b8f2453a79a19, type: 3}
       propertyPath: spawner
       value: 
