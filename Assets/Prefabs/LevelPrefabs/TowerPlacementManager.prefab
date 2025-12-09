@@ -47,10 +47,10 @@ MonoBehaviour:
   towerPrefabs:
   - {fileID: 6100771743348979110, guid: 83d58a519a871a74580835edd74436b1, type: 3}
   towerCosts: 64000000
-  ghostSprites:
-  - {fileID: 21300000, guid: d1270ae15bac43148a19323399ad023e, type: 3}
-  ghost2DPrefab: {fileID: 5531361827689155325, guid: 7db3def9e48b95947b12357674f35105, type: 3}
+  ghost2DPrefab: {fileID: 4633443470783204095, guid: 0429f0f3e84dc2d419039cb002b7127f, type: 3}
   targetCanvas: {fileID: 644886713759973131, guid: 41354c5e46305514e84b8f2453a79a19, type: 3}
   ghostScreenScale: 1
   ghostImageSize: {x: 200, y: 200}
   ignoreUIBlocking: 1
+  towerGhostSprites:
+  - {fileID: 21300000, guid: d1270ae15bac43148a19323399ad023e, type: 3}

@@ -504,7 +504,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5601011653475644296, guid: 41354c5e46305514e84b8f2453a79a19, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6071099418295272274, guid: 41354c5e46305514e84b8f2453a79a19, type: 3}
       propertyPath: m_text
@@ -957,6 +957,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 47683531376418781, guid: 24722df0c54e6aa4391e5c721b55f213, type: 3}
+      propertyPath: ghost2DPrefab
+      value: 
+      objectReference: {fileID: 4633443470783204095, guid: 0429f0f3e84dc2d419039cb002b7127f, type: 3}
+    - target: {fileID: 47683531376418781, guid: 24722df0c54e6aa4391e5c721b55f213, type: 3}
       propertyPath: towerCosts.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -972,6 +976,14 @@ PrefabInstance:
       propertyPath: 'towerPrefabs.Array.data[1]'
       value: 
       objectReference: {fileID: 1205842434837970547, guid: c1656cb59002d1341a86c0e9f54c0e6f, type: 3}
+    - target: {fileID: 47683531376418781, guid: 24722df0c54e6aa4391e5c721b55f213, type: 3}
+      propertyPath: towerGhostSprites.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 47683531376418781, guid: 24722df0c54e6aa4391e5c721b55f213, type: 3}
+      propertyPath: 'towerGhostSprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 7c48b1528d511f648a37d6d5c15b4308, type: 3}
     - target: {fileID: 797126954620105466, guid: 24722df0c54e6aa4391e5c721b55f213, type: 3}
       propertyPath: m_LocalPosition.x
       value: 72.639
