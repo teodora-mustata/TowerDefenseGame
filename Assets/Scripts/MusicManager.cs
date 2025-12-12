@@ -3,9 +3,8 @@ using UnityEngine;
 public class MusicManager : MonoBehaviour
 {
     public static MusicManager instance;
-
-    public AudioClip menuMusic;
-    private AudioSource audioSource;
+    public AudioSource audioSource;
+    public float volume = 1f;
 
     void Awake()
     {
@@ -20,15 +19,41 @@ public class MusicManager : MonoBehaviour
             return;
         }
 
-        audioSource = GetComponent<AudioSource>();
+        LoadVolume();
+        ApplyVolume();
     }
 
     public void PlayMusic(AudioClip clip)
     {
-        if (audioSource.clip == clip) return;
+        if (clip == null) return;
+        if (audioSource == null) return;
+
         audioSource.clip = clip;
         audioSource.loop = true;
         audioSource.Play();
+        ApplyVolume();
     }
 
+    public void SetVolume(float v)
+    {
+        volume = v;
+        ApplyVolume();
+        SaveVolume();
+    }
+
+    void ApplyVolume()
+    {
+        if (audioSource != null)
+            audioSource.volume = volume;
+    }
+
+    void SaveVolume()
+    {
+        PlayerPrefs.SetFloat("global_volume", volume);
+    }
+
+    void LoadVolume()
+    {
+        volume = PlayerPrefs.GetFloat("global_volume", 1f);
+    }
 }

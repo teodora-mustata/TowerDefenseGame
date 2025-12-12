@@ -1429,6 +1429,7 @@ GameObject:
   - component: {fileID: 2051738572}
   - component: {fileID: 2051738571}
   - component: {fileID: 2051738573}
+  - component: {fileID: 2051738574}
   m_Layer: 0
   m_Name: MusicManager
   m_TagString: Untagged
@@ -1448,7 +1449,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d0ee0a5f835ad84ea514cdc252e6237, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MusicManager
-  menuMusic: {fileID: 8300000, guid: 8d1e760105557ca4586d56de996739b0, type: 3}
+  audioSource: {fileID: 2051738573}
+  volume: 1
 --- !u!4 &2051738572
 Transform:
   m_ObjectHideFlags: 0
@@ -1475,7 +1477,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 8d1e760105557ca4586d56de996739b0, type: 3}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1561,6 +1563,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2051738574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2051738570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf246aeb6fccf21458ef628eeadec80f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelMusic
+  levelClip: {fileID: 8300000, guid: 8d1e760105557ca4586d56de996739b0, type: 3}
 --- !u!1 &2062733867
 GameObject:
   m_ObjectHideFlags: 0

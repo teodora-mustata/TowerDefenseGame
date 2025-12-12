@@ -8,6 +8,9 @@ public class LevelMusic : MonoBehaviour
     {
         if (MusicManager.instance != null && levelClip != null)
         {
+            if (MusicManager.instance.audioSource.clip == levelClip)
+                return;
+
             MusicManager.instance.PlayMusic(levelClip);
         }
     }
