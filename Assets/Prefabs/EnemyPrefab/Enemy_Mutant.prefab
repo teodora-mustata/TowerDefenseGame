@@ -93,9 +93,10 @@ MonoBehaviour:
   damageToTower: 10
   type: Normal
   coinDropPrefab: {fileID: 2096973821894285698, guid: 959e569912df4af4b8732e6750cd3fc3, type: 3}
-  coinReward: 100
+  coinReward: 200
   anim: {fileID: 6904937339967238257}
   laneTarget: {fileID: 0}
+  pullSpeed: 4
 --- !u!54 &2542334553910247999
 Rigidbody:
   m_ObjectHideFlags: 0

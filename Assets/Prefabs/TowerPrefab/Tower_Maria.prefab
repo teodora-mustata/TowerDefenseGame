@@ -108,7 +108,7 @@ MonoBehaviour:
   towerName: Maria
   range: 2
   fireRate: 0.5
-  damage: 75
+  damage: 100
   damageType: Normal
   maxHealth: 250
   projectilePrefab: {fileID: 0}
