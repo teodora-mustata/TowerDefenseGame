@@ -2,12 +2,17 @@ using UnityEngine;
 
 public class CoinDrop : MonoBehaviour
 {
-    public int coinValue = 10;
     public float lifeTime = 6f;
     public float flickerStartTime = 4f;
 
+    private int coinValue;
     private bool collected = false;
     private Renderer rend;
+
+    public void Init(int value)
+    {
+        coinValue = value;
+    }
 
     void Start()
     {

@@ -120,8 +120,12 @@ public class BaseEnemy : MonoBehaviour
         {
             Vector3 dropPos = transform.position + Vector3.up * 0.3f;
             GameObject drop = Instantiate(coinDropPrefab, dropPos, Quaternion.identity);
-            drop.GetComponent<CoinDrop>().coinValue = coinReward;
+
+            CoinDrop coin = drop.GetComponent<CoinDrop>();
+            if (coin != null)
+                coin.Init(coinReward);
         }
+
 
         Destroy(gameObject, 5f);
     }

@@ -634,19 +634,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4515224845386569460, guid: 078d311b159f6234d87b38f48ed16770, type: 3}
       propertyPath: phases.Array.data[1].spawnInterval
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4515224845386569460, guid: 078d311b159f6234d87b38f48ed16770, type: 3}
       propertyPath: phases.Array.data[2].spawnInterval
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4515224845386569460, guid: 078d311b159f6234d87b38f48ed16770, type: 3}
       propertyPath: phases.Array.data[3].spawnInterval
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4515224845386569460, guid: 078d311b159f6234d87b38f48ed16770, type: 3}
       propertyPath: phases.Array.data[4].spawnInterval
-      value: 9
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4515224845386569460, guid: 078d311b159f6234d87b38f48ed16770, type: 3}
       propertyPath: phases.Array.data[0].enemies.Array.size
@@ -952,6 +952,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2870420169990681327, guid: 41354c5e46305514e84b8f2453a79a19, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3956428937652211070, guid: 41354c5e46305514e84b8f2453a79a19, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1033692772}
+    - target: {fileID: 3956428937652211070, guid: 41354c5e46305514e84b8f2453a79a19, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectTower
+      objectReference: {fileID: 0}
     - target: {fileID: 4168795387127282427, guid: 41354c5e46305514e84b8f2453a79a19, type: 3}
       propertyPath: m_Name
       value: MenuBar
@@ -1076,7 +1088,7 @@ PrefabInstance:
       objectReference: {fileID: 4159718042965851168, guid: f95b83962d634c34aafbf9b6bbbe40bc, type: 3}
     - target: {fileID: 47683531376418781, guid: 24722df0c54e6aa4391e5c721b55f213, type: 3}
       propertyPath: towerGhostSprites.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 47683531376418781, guid: 24722df0c54e6aa4391e5c721b55f213, type: 3}
       propertyPath: 'towerGhostSprites.Array.data[1]'
@@ -1086,6 +1098,10 @@ PrefabInstance:
       propertyPath: 'towerGhostSprites.Array.data[2]'
       value: 
       objectReference: {fileID: 21300000, guid: f4c3a8cfe4463ad4e9ab1428b28a5928, type: 3}
+    - target: {fileID: 47683531376418781, guid: 24722df0c54e6aa4391e5c721b55f213, type: 3}
+      propertyPath: 'towerGhostSprites.Array.data[3]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 26655badd39c28c45bb68a4be4de2e26, type: 3}
     - target: {fileID: 797126954620105466, guid: 24722df0c54e6aa4391e5c721b55f213, type: 3}
       propertyPath: m_LocalPosition.x
       value: 72.639
