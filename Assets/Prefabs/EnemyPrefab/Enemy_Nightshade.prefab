@@ -148,8 +148,9 @@ MonoBehaviour:
   speed: 1.3
   health: 300
   damageToTower: 20
-  type: Normal
+  type: Dark
   coinDropPrefab: {fileID: 2096973821894285698, guid: 959e569912df4af4b8732e6750cd3fc3, type: 3}
   coinReward: 150
   anim: {fileID: 2874204863741732365}
   laneTarget: {fileID: 0}
+  pullSpeed: 4

@@ -97,8 +97,8 @@ public class BaseEnemy : MonoBehaviour
         if (isDead) return;
 
         if (type == "Plant" && dmgType == "Fire") dmg *= 2;
-        if (type == "Fire" && dmgType == "Ice") dmg *= 2;
-        if (type == "Fire" && dmgType == "Fire") dmg = Mathf.RoundToInt(dmg * 0.5f);
+        if (type == "Tank" && dmgType == "Heavy") dmg = Mathf.RoundToInt(dmg * 1.3f);
+        if (type == "Dark" ) dmg = Mathf.RoundToInt(dmg * 0.8f);
 
         health -= dmg;
 

@@ -1170,6 +1170,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1800089096259094433, guid: 41354c5e46305514e84b8f2453a79a19, type: 3}
+      propertyPath: coins
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 1897881500631188898, guid: 41354c5e46305514e84b8f2453a79a19, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

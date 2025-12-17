@@ -50,7 +50,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 526a0822f2d86814ea2937d558aba402, type: 3}
       propertyPath: m_Name
-      value: Mutant
+      value: Enemy_Mutant
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 526a0822f2d86814ea2937d558aba402, type: 3}
       propertyPath: m_Controller
@@ -91,7 +91,7 @@ MonoBehaviour:
   speed: 0.5
   health: 400
   damageToTower: 10
-  type: Normal
+  type: Tank
   coinDropPrefab: {fileID: 2096973821894285698, guid: 959e569912df4af4b8732e6750cd3fc3, type: 3}
   coinReward: 200
   anim: {fileID: 6904937339967238257}
