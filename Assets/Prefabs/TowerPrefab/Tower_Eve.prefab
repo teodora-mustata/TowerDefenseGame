@@ -236,6 +236,7 @@ GameObject:
   - component: {fileID: 5555189273320652467}
   - component: {fileID: 7265049782925854919}
   - component: {fileID: 2483221111041284360}
+  - component: {fileID: 5796627947108610041}
   m_Layer: 0
   m_Name: Tower_Eve
   m_TagString: Untagged
@@ -259,6 +260,7 @@ Transform:
   - {fileID: 2916560050097144822}
   - {fileID: 6316159037497263197}
   - {fileID: 4303606149973789585}
+  - {fileID: 2581013315152316814}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!95 &5555189273320652467
@@ -325,8 +327,24 @@ MonoBehaviour:
   projectilePrefab: {fileID: 737722975189141711, guid: e00eb60d69a69c540b2a7a5f3842baaa, type: 3}
   animator: {fileID: 5555189273320652467}
   placedTile: {fileID: 0}
+  bloodCooldown: 5
+  healthDropThreshold: 5
   explosionRadius: 2
   firePoint: {fileID: 4303606149973789585}
+--- !u!114 &5796627947108610041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205842434837970547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 218c245372da1e34c9c75d80d5ceef37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BloodEffectController
+  bloodEffectPrefab: {fileID: 8171601124169479914, guid: 290be473334079941a44650f3158baf3, type: 3}
+  bloodSpawnPoint: {fileID: 2581013315152316814}
 --- !u!1 &1302389555284863575
 GameObject:
   m_ObjectHideFlags: 0
@@ -2337,6 +2355,37 @@ Transform:
   - {fileID: 7260381161496883876}
   m_Father: {fileID: 5048850914960351024}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &9060918772090281861
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2581013315152316814}
+  m_Layer: 0
+  m_Name: BloodSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2581013315152316814
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9060918772090281861}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 1.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2015312328658756809}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &9181758052750772118
 GameObject:
   m_ObjectHideFlags: 0

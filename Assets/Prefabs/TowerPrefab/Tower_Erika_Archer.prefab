@@ -1608,6 +1608,7 @@ GameObject:
   - component: {fileID: 701615715616526510}
   - component: {fileID: 2890086071502107317}
   - component: {fileID: 1520953070610059311}
+  - component: {fileID: 4756416732096459369}
   m_Layer: 0
   m_Name: Tower_Erika_Archer
   m_TagString: Untagged
@@ -1635,6 +1636,7 @@ Transform:
   - {fileID: 7188705908408448939}
   - {fileID: 1419137407062658952}
   - {fileID: 704318037859598448}
+  - {fileID: 2777599836992207905}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!135 &701615715616526510
@@ -1701,7 +1703,23 @@ MonoBehaviour:
   projectilePrefab: {fileID: 5238414935593990817, guid: 714ab6d884c7aa444849cc7b418f5608, type: 3}
   animator: {fileID: 2890086071502107317}
   placedTile: {fileID: 0}
+  bloodCooldown: 5
+  healthDropThreshold: 5
   firePoint: {fileID: 704318037859598448}
+--- !u!114 &4756416732096459369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6100771743348979110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 218c245372da1e34c9c75d80d5ceef37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BloodEffectController
+  bloodEffectPrefab: {fileID: 8171601124169479914, guid: 290be473334079941a44650f3158baf3, type: 3}
+  bloodSpawnPoint: {fileID: 2777599836992207905}
 --- !u!1 &6198444830410629506
 GameObject:
   m_ObjectHideFlags: 0
@@ -3049,6 +3067,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 688217073792007583}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8699214013929053407
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2777599836992207905}
+  m_Layer: 0
+  m_Name: BloodSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2777599836992207905
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8699214013929053407}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 1.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6908973999602937628}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &8901557150413832969
 GameObject:
   m_ObjectHideFlags: 0

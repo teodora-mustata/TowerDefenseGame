@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2877921881153562533
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 362502242485689534}
+  m_Layer: 0
+  m_Name: BloodSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &362502242485689534
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2877921881153562533}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 1.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4360279918775181928}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1001 &4253766424224351619
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58,7 +89,10 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 39b2c4fdb81b3dd4798621519e50ff87, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3a108ddb2b4bee14faafc9f8c91b13cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 362502242485689534}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3a108ddb2b4bee14faafc9f8c91b13cd, type: 3}
       insertIndex: -1
@@ -66,6 +100,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3a108ddb2b4bee14faafc9f8c91b13cd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4201901778805408543}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3a108ddb2b4bee14faafc9f8c91b13cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2867286868294775766}
   m_SourcePrefab: {fileID: 100100000, guid: 3a108ddb2b4bee14faafc9f8c91b13cd, type: 3}
 --- !u!1 &4019748366059403474 stripped
 GameObject:
@@ -114,8 +151,29 @@ MonoBehaviour:
   projectilePrefab: {fileID: 0}
   animator: {fileID: 7665970644879734802}
   placedTile: {fileID: 0}
+  bloodCooldown: 5
+  healthDropThreshold: 5
   explosionRadius: 2
   explosionDamage: 150
+--- !u!114 &2867286868294775766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4019748366059403474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 218c245372da1e34c9c75d80d5ceef37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BloodEffectController
+  bloodEffectPrefab: {fileID: 8171601124169479914, guid: 290be473334079941a44650f3158baf3, type: 3}
+  bloodSpawnPoint: {fileID: 362502242485689534}
+--- !u!4 &4360279918775181928 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3a108ddb2b4bee14faafc9f8c91b13cd, type: 3}
+  m_PrefabInstance: {fileID: 4253766424224351619}
+  m_PrefabAsset: {fileID: 0}
 --- !u!95 &7665970644879734802 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 3a108ddb2b4bee14faafc9f8c91b13cd, type: 3}

@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8130327917606473349
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5602313706653516279}
+  m_Layer: 0
+  m_Name: BloodSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5602313706653516279
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8130327917606473349}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 1.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6459199904105610033}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1001 &6784964665954720986
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58,7 +89,10 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 11a6a53c8fa504946b3920f6ca0f2b8f, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 36e7bbad7aa342f46a5ddf920f90553d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5602313706653516279}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 36e7bbad7aa342f46a5ddf920f90553d, type: 3}
       insertIndex: -1
@@ -69,6 +103,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 36e7bbad7aa342f46a5ddf920f90553d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 9209344726450631578}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 36e7bbad7aa342f46a5ddf920f90553d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4743961858972781615}
   m_SourcePrefab: {fileID: 100100000, guid: 36e7bbad7aa342f46a5ddf920f90553d, type: 3}
 --- !u!95 &1099895098227712331 stripped
 Animator:
@@ -101,6 +138,7 @@ MonoBehaviour:
   coinReward: 300
   anim: {fileID: 1099895098227712331}
   laneTarget: {fileID: 0}
+  pullSpeed: 4
 --- !u!54 &2705615958534245628
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -149,3 +187,22 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4743961858972781615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5974131264998072715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 218c245372da1e34c9c75d80d5ceef37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BloodEffectController
+  bloodEffectPrefab: {fileID: 8171601124169479914, guid: 290be473334079941a44650f3158baf3, type: 3}
+  bloodSpawnPoint: {fileID: 5602313706653516279}
+--- !u!4 &6459199904105610033 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 36e7bbad7aa342f46a5ddf920f90553d, type: 3}
+  m_PrefabInstance: {fileID: 6784964665954720986}
+  m_PrefabAsset: {fileID: 0}
