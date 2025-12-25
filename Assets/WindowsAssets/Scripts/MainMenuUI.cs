@@ -13,6 +13,11 @@ public class MainMenuUI : MonoBehaviour
         SceneManager.LoadScene("Credits");
     }
 
+    public void OnEncyclopedia()
+    {
+        SceneManager.LoadScene("Encyclopedia");
+    }
+
     public void OnExit()
     {
         Application.Quit();
