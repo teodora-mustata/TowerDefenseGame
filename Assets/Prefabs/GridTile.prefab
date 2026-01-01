@@ -118,9 +118,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GridTile
   isEmpty: 1
-  normalColor: {r: 0.49685526, g: 0.47930893, b: 0.42342064, a: 1}
-  canPlaceColor: {r: 0.7, g: 1, b: 0.7, a: 1}
-  cannotPlaceColor: {r: 1, g: 0.6, b: 0.6, a: 1}
+  currentTower: {fileID: 0}
+  normalColor: {r: 0.3132075, g: 0.29919338, b: 0.26415804, a: 0.09803922}
+  canPlaceColor: {r: 0.7, g: 1, b: 0.7, a: 0.34117648}
+  cannotPlaceColor: {r: 1, g: 0.6, b: 0.6, a: 0.35686275}
 --- !u!64 &5578232282022327898
 MeshCollider:
   m_ObjectHideFlags: 0
