@@ -8,6 +8,7 @@ public class EncyclopediaUI : MonoBehaviour
     public Image iconImage;
     public TMP_Text nameText;
     public TMP_Text descriptionText;
+    public EncyclopediaModelPreview modelPreview;
 
     [Header("Panels")]
     public GameObject towerStatsPanel;
@@ -29,6 +30,9 @@ public class EncyclopediaUI : MonoBehaviour
 
     public void ShowEntry(EncyclopediaEntry entry)
     {
+        gameObject.SetActive(true);
+
+        modelPreview.ShowModel(entry.prefab);
         nameText.text = entry.entryName;
         iconImage.sprite = entry.icon;
         descriptionText.text = entry.description;

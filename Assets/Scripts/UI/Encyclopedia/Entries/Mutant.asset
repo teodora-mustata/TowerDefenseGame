@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c57affa93e9e2cd4ca88ece797769af9, type: 3}
-  m_Name: ErikaArcherEntry
+  m_Name: Mutant
   m_EditorClassIdentifier: Assembly-CSharp::EncyclopediaEntry
-  entryName: Erika Archer
-  icon: {fileID: 21300000, guid: 7dcc3723ae11086418dfbc6c9d376a91, type: 3}
-  description: A reliable archer and the first line of defense. Simple, balanced,
-    and effective against early threats.
-  prefab: {fileID: 6100771743348979110, guid: 83d58a519a871a74580835edd74436b1, type: 3}
+  entryName: Mutant
+  icon: {fileID: 21300000, guid: 40191d0fd6eda5f428c4ce8b299b0f08, type: 3}
+  description: A massive, mutated brute with incredible endurance. Slow and clumsy,
+    but capable of soaking up huge amounts of damage.
+  prefab: {fileID: 178102833543803057, guid: 2137a8aa8b81a854e8558b5fb5416fc6, type: 3}

@@ -192,7 +192,7 @@ MonoBehaviour:
   damageToTower: 10
   type: Plant
   coinDropPrefab: {fileID: 2096973821894285698, guid: 959e569912df4af4b8732e6750cd3fc3, type: 3}
-  coinReward: 100
+  coinReward: 150
   anim: {fileID: 1712501815934723785}
   laneTarget: {fileID: 0}
   pullSpeed: 4

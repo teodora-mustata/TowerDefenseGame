@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c57affa93e9e2cd4ca88ece797769af9, type: 3}
-  m_Name: ErikaArcherEntry
+  m_Name: Uriel
   m_EditorClassIdentifier: Assembly-CSharp::EncyclopediaEntry
-  entryName: Erika Archer
-  icon: {fileID: 21300000, guid: 7dcc3723ae11086418dfbc6c9d376a91, type: 3}
-  description: A reliable archer and the first line of defense. Simple, balanced,
-    and effective against early threats.
-  prefab: {fileID: 6100771743348979110, guid: 83d58a519a871a74580835edd74436b1, type: 3}
+  entryName: Uriel
+  icon: {fileID: 21300000, guid: b36dc44e08932694d9d1923a48bc971b, type: 3}
+  description: A heavily armored defender built to hold the line. Short range but
+    exceptional durability makes Uriel a formidable tank.
+  prefab: {fileID: 4019748366059403474, guid: 69257eb1d8979754180340fc8f83645c, type: 3}
