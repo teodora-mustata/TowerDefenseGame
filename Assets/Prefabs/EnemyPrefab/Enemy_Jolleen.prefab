@@ -188,7 +188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BaseEnemy
   enemyName: Jolleen
   speed: 0.8
-  health: 100
+  health: 150
   damageToTower: 10
   type: Plant
   coinDropPrefab: {fileID: 2096973821894285698, guid: 959e569912df4af4b8732e6750cd3fc3, type: 3}

@@ -451,7 +451,7 @@ GameObject:
   - component: {fileID: 4549155983642804906}
   - component: {fileID: 24424491381403797}
   - component: {fileID: 4413980101166843028}
-  - component: {fileID: 3602431951022090615}
+  - component: {fileID: 3286233328160860683}
   m_Layer: 5
   m_Name: GameOverPanel
   m_TagString: Untagged
@@ -519,7 +519,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &3602431951022090615
+--- !u!114 &3286233328160860683
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -528,10 +528,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1097187352924875849}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1f9b9b23d738054c9a412ea06c1f29e, type: 3}
+  m_Script: {fileID: 11500000, guid: 94bafb7297059324699186f450b1e55c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameOverUI
-  panel: {fileID: 1097187352924875849}
+  m_EditorClassIdentifier: Assembly-CSharp::GameOverPanel
 --- !u!1 &1284883169593333143
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,9 +693,9 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.07450981, g: 1, b: 0, a: 1}
-    m_HighlightedColor: {r: 0.047242146, g: 0.3773585, b: 0, a: 0.8117647}
-    m_PressedColor: {r: 0.40382266, g: 1, b: 0.3160377, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0.3529412}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0.8627451}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 0.7058824}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -1171,9 +1170,9 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.07450981, g: 1, b: 0, a: 1}
-    m_HighlightedColor: {r: 0.042665295, g: 0.4245283, b: 0.014017452, a: 0.8117647}
-    m_PressedColor: {r: 0.504717, g: 1, b: 0.52413994, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0.3529412}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0.8627451}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 0.7058824}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -3063,8 +3062,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3602431951022090615}
-        m_TargetAssemblyTypeName: GameOverUI, Assembly-CSharp
+      - m_Target: {fileID: 3286233328160860683}
+        m_TargetAssemblyTypeName: GameOverPanel, Assembly-CSharp
         m_MethodName: Retry
         m_Mode: 1
         m_Arguments:
@@ -3542,8 +3541,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3602431951022090615}
-        m_TargetAssemblyTypeName: GameOverUI, Assembly-CSharp
+      - m_Target: {fileID: 3286233328160860683}
+        m_TargetAssemblyTypeName: GameOverPanel, Assembly-CSharp
         m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
@@ -4159,7 +4158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.54307556, g: 1, b: 0.50628924, a: 1}
+  m_Color: {r: 1, g: 0.9971838, b: 0.5264151, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5875,7 +5874,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &8432148760021644238

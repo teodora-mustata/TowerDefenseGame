@@ -22,7 +22,11 @@ public class GameWinUI : MonoBehaviour
 
     public void NextLevel()
     {
-        SceneManager.LoadScene("Level2");
+        int currentIndex = SceneManager.GetActiveScene().buildIndex;
+        int nextIndex = currentIndex + 1;
+
+        if (nextIndex < SceneManager.sceneCountInBuildSettings)
+            SceneManager.LoadScene(nextIndex);
     }
 
     public void MainMenu()
