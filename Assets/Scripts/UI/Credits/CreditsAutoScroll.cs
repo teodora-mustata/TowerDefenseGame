@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEditor.PlayerSettings;
 
 public class CreditsAutoScroll : MonoBehaviour
 {
@@ -15,5 +16,10 @@ public class CreditsAutoScroll : MonoBehaviour
     private void Update()
     {
         scrollRect.verticalNormalizedPosition -= scrollSpeed * Time.deltaTime / 100f;
+        if (scrollRect.verticalNormalizedPosition <= 0f)
+        {
+            scrollRect.vertical = false;       
+            scrollRect.velocity = Vector2.zero;
+        }
     }
 }

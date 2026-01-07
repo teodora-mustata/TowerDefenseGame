@@ -589,8 +589,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 0, y: 1200}
+  m_SizeDelta: {x: 1000, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &562100467
 MonoBehaviour:
@@ -612,10 +612,49 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Assets used in this project:\r\n\r\n\u2192 https://opengameart.org\r\n\u2192
-    https://itch.io\r\n\u2192 https://mixamo.com\r\n\u2192 https://freesound.org\r\n\u2192
-    https://kenney.nl\r\n\u2192 https://cgtrader.com\r\n\u2192 https://pixabay.com\r\n...
-    (toate sursele)\r\n"
+  m_text: "---------- The team :) ----------\n\nMusta\u021B\u0103 Teodora\nPele\u0219
+    \u0218tefania-Teodora\nRadea Constantin-Sebastian\n\n---------- Assets ----------\n\nCastle
+    - Pele\u0219 \u0218tefania-Teodora\n\n--- Tower Assets --- \n\nErika Archer with
+    Bow/Arrow - Mixamo\nEve by J.Gonzales - Mixamo\nMaria W/Prop J J Ong - Mixamo\nMedea
+    by M. Arrebola - Mixamo\nUriel A Plotexia - Mixamo\nTower animations - Mixamo\n\n---
+    Enemy Assets --- \n\nJolleen - Mixamo\nJones - Mixamo\nMutant - Mixamo\nNightshade
+    J Friedrich - Mixamo\nVampire A Lusth - Mixamo\nEnemy animations - Mixamo\n\n---
+    Music ---\n\nYoutube Studio Audio Library\nMenu Music: Rapid Unscheduled Disassembly
+    - The Grey Room _ Density & Time\nLevel1 Music: Sparse Clouds - Quincas Moreira\nLevel2
+    Music: Campo Gitano - House of the Gipsies\nLevel3 Music: Moritas Moras - House
+    of the Gipsies\nLevel4 Music: March of the Hares - Nathan Moore\nLevel5 Music:
+    Series Of Plans - Riot\nEncyclopedia Music: Orquidario - Quincas Moreira\n\n--Audio
+    Effects--\nWoman Scream 4 - https://www.myinstants.com/en/instant/woman-scream-4/\n\n---
+    Other assets --- \n\n\"A slightly different magic fire potion\" (https://skfb.ly/oEWEE)
+    by FunWithBlender is licensed under CC Attribution-NonCommercial-NoDerivs (http://creativecommons.org/licenses/by-nc-nd/4.0/).\nCoin
+    drop - https://www.freepik.com/free-vector/indian-rupee-gold-coin-stack_3468794.htm#fromView=keyword&page=2&position=45&uuid=54a28e72-ad23-4a0f-90d2-ef4749411f70&query=Coin+sprite\nGame
+    progress bar - https://www.freepik.com/free-vector/game-ui-loading-progress-bars-cartoon-vector-set_28699001.htm#fromView=search&page=1&position=1&uuid=94bb3e21-8512-4bd8-937f-7330fb0c3dd9\nStone
+    UI Frames - <a href=\"https://www.freepik.com/free-vector/set-stone-game-ui-frames-buttons-isolated-background-vector-cartoon-illustration-rectangular-round-menu-boards-play-stop-pause-icons-red-green-progress-bars-rock-texture_81416910.htm#fromView=search&page=1&position=23&uuid=e7f2021e-91a8-4007-8868-99921d53fdd5\">Image
+    by upklyak on Freepik</a>\nEncyclopedia Background - https://www.freepik.com/free-vector/creepy-castle-rock-night-haunted-gothic-palace-mountains-building-with-pointed-tower-roofs-glowing-windows-bats-flying-dark-sky-fantasy-dracula-home-cartoon-vector-illustration_12120255.htm#fromView=search&page=1&position=2&uuid=61ae1c8a-1b72-4274-ad95-f1d9fff307be\nEuropean
+    Forests - Realistic Trees - https://assetstore.unity.com/packages/3d/vegetation/trees/european-forests-realistic-trees-229716\nQwantani
+    Night - https://polyhaven.com/a/qwantani_night_puresky\nKloofendal 48d Partly
+    Cloudy (Pure Sky) - https://polyhaven.com/a/kloofendal_48d_partly_cloudy_puresky\nRealistic
+    Terrain Textures FREE - https://assetstore.unity.com/packages/2d/textures-materials/floors/realistic-terrain-textures-free-279940?srsltid=AfmBOorAJrzBCn71i50bV5FfyVjB5HLm8H0eYQBn2UEntHoqt961Pyeh#reviews\nTerrain
+    Sample Asset Pack - https://assetstore.unity.com/packages/3d/environments/landscapes/terrain-sample-asset-pack-145808?srsltid=AfmBOorYcNJA7EEnHHPF2zDwTtrWV76MoqTjtKDHN4YIRHs7pmn6DF4H\n\"Candy
+    cane\" (https://skfb.ly/6WyVq) by negar is licensed under Creative Commons Attribution
+    (http://creativecommons.org/licenses/by/4.0/).\nRealistic Smoke Texture with
+    Soft Particle Edges PNG - https://toppng.com/free-image/smoke-particle-texture-PNG-free-PNG-Images_70935\nKloppenheim
+    02 (Pure Sky) - https://polyhaven.com/a/kloppenheim_02_puresky\n3d lantern -
+    https://assetstore.unity.com/packages/3d/props/exterior/3d-lantern-278436 \n\"Bran
+    Castle - Romania\" (https://skfb.ly/669BT) by VibrantNebula is licensed under
+    Creative Commons Attribution-ShareAlike (http://creativecommons.org/licenses/by-sa/4.0/).\nOvercast
+    Soil (Pure Sky) - https://polyhaven.com/a/overcast_soil_puresky\n\"Bus Stop USSR\"
+    (https://skfb.ly/6XF6L) by Milionna is licensed under Creative Commons Attribution
+    (http://creativecommons.org/licenses/by/4.0/).\n\"destroyed buildings\" (https://skfb.ly/oxTPX)
+    by gelmi.com.br is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).\n\"War
+    Damaged Building\" (https://skfb.ly/pzOU7) by local.yany is licensed under Creative
+    Commons Attribution (http://creativecommons.org/licenses/by/4.0/).\n\"War Damaged
+    building 2\" (https://skfb.ly/pzOTF) by local.yany is licensed under Creative
+    Commons Attribution (http://creativecommons.org/licenses/by/4.0/).\n\"War Damaged
+    Hall\" (https://skfb.ly/pzOTL) by local.yany is licensed under Creative Commons
+    Attribution (http://creativecommons.org/licenses/by/4.0/).\nImperfect-black-bmw-e36
+    - https://sketchfab.com/3d-models/imperfect-black-bmw-e36-37e2f4775e5f457c81ea251bf64f1ed7\n\n---
+    Fonts ---\n\nMedievalSharp - Google Fonts (https://fonts.google.com/specimen/MedievalSharp) "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -642,8 +681,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -667,7 +706,7 @@ MonoBehaviour:
   m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
-  m_isRichText: 1
+  m_isRichText: 0
   m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
@@ -721,7 +760,7 @@ RectTransform:
   m_GameObject: {fileID: 698527515}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.57291996, y: 0.57291996, z: 0.57291996}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 464664472}
@@ -1312,7 +1351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d0cded384211fc4abc13500af6cccc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CreditsAutoScroll
-  scrollSpeed: 20
+  scrollSpeed: 5
 --- !u!114 &1766460441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1338,8 +1377,8 @@ MonoBehaviour:
   m_VerticalScrollbar: {fileID: 1832383652}
   m_HorizontalScrollbarVisibility: 2
   m_VerticalScrollbarVisibility: 2
-  m_HorizontalScrollbarSpacing: -3
-  m_VerticalScrollbarSpacing: -3
+  m_HorizontalScrollbarSpacing: 0
+  m_VerticalScrollbarSpacing: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1463,8 +1502,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 815690842}
   m_HandleRect: {fileID: 815690841}
   m_Direction: 2
-  m_Value: 0
-  m_Size: 0.09575
+  m_Value: 0.5881898
+  m_Size: 0.095
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1666,7 +1705,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 3617}
+  m_AnchoredPosition: {x: 0, y: 1490.7529}
   m_SizeDelta: {x: -1600, y: 4000}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &2088074752
