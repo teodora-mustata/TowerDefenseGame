@@ -24,37 +24,54 @@ public class EnemySpawner : MonoBehaviour
 
     public float levelDuration = 60f;
 
+    private float levelTime;
     private float timer;
 
     public UnityEvent<float> OnProgressChanged;
 
+    void OnEnable()
+    {
+        levelTime = 0f;
+        timer = 0f;
+    }
+
     void Update()
     {
-        float progress = Mathf.Clamp01(Time.time / levelDuration);
+        levelTime += Time.deltaTime;
+
+        float progress = Mathf.Clamp01(levelTime / levelDuration);
         OnProgressChanged?.Invoke(progress);
 
-        SpawnPhase phase = GetPhaseForTime(Time.time);
+        SpawnPhase phase = GetPhaseForTime(levelTime);
 
         timer += Time.deltaTime;
         if (timer >= phase.spawnInterval)
         {
-            SpawnEnemy();
-            timer = 0;
+            SpawnEnemy(phase);
+            timer = 0f;
         }
     }
 
-    void SpawnEnemy()
+    void SpawnEnemy(SpawnPhase phase)
     {
+        if (phase.enemies.Length == 0 || lanes.Length == 0)
+            return;
+
         Transform lane = lanes[Random.Range(0, lanes.Length)];
-        EnemySpawnEntry chosen = GetEnemyForCurrentTime(Time.time);
+        EnemySpawnEntry chosen = GetEnemyForPhase(phase);
 
         Vector3 spawnPos = lane.position;
         spawnPos.y += chosen.enemyPrefab.transform.position.y;
 
-        GameObject enemy = Instantiate(chosen.enemyPrefab, spawnPos, chosen.enemyPrefab.transform.rotation);
+        GameObject enemy = Instantiate(
+            chosen.enemyPrefab,
+            spawnPos,
+            chosen.enemyPrefab.transform.rotation
+        );
 
         BaseEnemy e = enemy.GetComponent<BaseEnemy>();
-        e.laneTarget = lane;
+        if (e != null)
+            e.laneTarget = lane;
     }
 
     SpawnPhase GetPhaseForTime(float time)
@@ -62,31 +79,30 @@ public class EnemySpawner : MonoBehaviour
         SpawnPhase active = phases[0];
 
         foreach (var p in phases)
+        {
             if (time >= p.startTime)
                 active = p;
+        }
 
         return active;
     }
 
-    EnemySpawnEntry GetEnemyForCurrentTime(float time)
+    EnemySpawnEntry GetEnemyForPhase(SpawnPhase phase)
     {
-        SpawnPhase active = GetPhaseForTime(time);
-
-        float total = 0;
-        foreach (var e in active.enemies)
+        float total = 0f;
+        foreach (var e in phase.enemies)
             total += e.probability;
 
         float rand = Random.value * total;
-        float cumulative = 0;
+        float cumulative = 0f;
 
-        foreach (var e in active.enemies)
+        foreach (var e in phase.enemies)
         {
             cumulative += e.probability;
             if (rand <= cumulative)
                 return e;
         }
 
-        return active.enemies[0];
+        return phase.enemies[0];
     }
 }
-
