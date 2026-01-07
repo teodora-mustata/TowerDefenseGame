@@ -2086,6 +2086,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelMusic
       objectReference: {fileID: 0}
+    - target: {fileID: 6636774665907576306, guid: a63c13356b347104db456a52c7a1260d, type: 3}
+      propertyPath: levelClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c4f5525cd38a10a4fbe11e503badd6c1, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

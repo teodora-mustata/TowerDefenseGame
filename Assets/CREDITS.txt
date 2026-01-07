@@ -35,6 +35,7 @@ Level2 Music: Campo Gitano - House of the Gipsies
 Level3 Music: Moritas Moras - House of the Gipsies
 Level4 Music: March of the Hares - Nathan Moore
 Level5 Music: Series Of Plans - Riot
+Encyclopedia Music: Orquidario - Quincas Moreira
 
 --Audio Effects--
 Woman Scream 4 - https://www.myinstants.com/en/instant/woman-scream-4/
